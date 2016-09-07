@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Send JSONb</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	{% load static %}
+	<script type="text/javascript" src="{% static 'jsonbapp/js/save.js' %}"></script>
+</head>
+<body>
+	<form action="javascript:void(null);" method="post" onsubmit="save()">
+		{% csrf_token %}
+		<label>First name:</label></br>
+		<input type="text" name="first_name"></br>
+		<label>Email:</label></br>
+		<input type="email" name="email"></br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
